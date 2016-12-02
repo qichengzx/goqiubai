@@ -1,0 +1,32 @@
+<!-- public/index.html -->
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <title>糗百</title>
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet"  href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>{{ .title }}</h2>
+                    <table class="table table-striped table-bordered table-hover">
+                        {{ range $item := .items }}
+                        <tr>
+                            <td>
+                            {{ $item.Content }}
+                            </td>
+                        </tr>
+                        {{ end }}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
