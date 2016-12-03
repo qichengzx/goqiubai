@@ -3,13 +3,12 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>糗百</title>
 
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-        <!-- Font Awesome -->
         <link rel="stylesheet"  href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
     </head>
     <body>
         <div class="container">
@@ -19,12 +18,17 @@
                     <table class="table table-striped table-bordered table-hover">
                         {{ range $item := .items }}
                         <tr>
-                            <td>
-                            {{ $item.Content }}
-                            </td>
+                            <td>{{ $item.Content }}</td>
                         </tr>
                         {{ end }}
                     </table>
+
+                    <nav>
+                      <ul class="pager">
+                        {{ if gt .prevPage 0 }}<li><a href="/?page={{ .prevPage }}">上一页</a></li>{{end}}
+                        <li><a href="/?page={{ .nextPage }}">下一页</a></li>
+                      </ul>
+                    </nav>
                 </div>
             </div>
         </div>

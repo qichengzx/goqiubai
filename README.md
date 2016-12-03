@@ -1,9 +1,18 @@
 ## 糗百首页热门
 
-### TODO
+带翻页查看糗百24小时热门帖子。
 
-分页
+### 运行
+
+```
+$ go get github.com/qichengzx/goqiubai
+$ cd $GOPATH/src/github.com/qichengzx/goqiubai
+$ go run main.go 
+//或者
+$ go build main.go
+$ ./main
+```
 
 ## screenshot
 
-![ba695656-2d38-4417-8af0-6cf05ce0f8d1](https://cloud.githubusercontent.com/assets/1927478/20837754/6c7ae4c6-b8e0-11e6-8152-ee6104dcbc04.png)
+![screenshot](https://cloud.githubusercontent.com/assets/1927478/20856547/5fe7d4a0-b94c-11e6-8c88-d53568b78df7.png)
